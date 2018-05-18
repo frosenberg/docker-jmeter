@@ -1,8 +1,8 @@
-FROM		hauptmedia/java:oracle-java7
+FROM openjdk:9
 
 ENV     	DEBIAN_FRONTEND noninteractive
 
-ENV		JMETER_VERSION	2.12
+ENV		JMETER_VERSION	4.0
 ENV		JMETER_HOME	/opt/jmeter
 ENV		JMETER_DOWNLOAD_URL  https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-${JMETER_VERSION}.tgz
 

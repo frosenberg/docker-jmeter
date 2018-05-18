@@ -1,4 +1,9 @@
-build:
-	docker build -t="hauptmedia/jmeter" .
+TAG ?= 4.0
 
-.PHONY: build
+build:
+	docker build -t="docker.artifactory.braintribe.com/braintribe/jmeter:$(TAG)" .
+
+push:
+	docker push docker.artifactory.braintribe.com/braintribe/jmeter:$(TAG)
+
+.PHONY: build push
